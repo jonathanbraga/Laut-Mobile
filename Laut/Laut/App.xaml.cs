@@ -23,13 +23,20 @@ namespace Laut
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MenuPage/NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<MenuPage>();
+            Container.RegisterTypeForNavigation<ServicePage>();
+            Container.RegisterTypeForNavigation<ProjectPage>();
+            Container.RegisterTypeForNavigation<ProductPage>();
+            Container.RegisterTypeForNavigation<DetailPage>();
+            Container.RegisterTypeForNavigation<DetailProjectPage>();
+            Container.RegisterTypeForNavigation<DetailProductPage>();
         }
     }
 }

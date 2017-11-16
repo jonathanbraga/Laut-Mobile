@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:custom="clr-namespace:Laut.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Laut.Views.ServicePage"
+             Title="Serviços">  
+    <StackLayout>
+        <custom:CustomListView
+            ItemSelected="ItemSelectedColorBackground"
+            ItemTappedCommand="{Binding ItemServiceCommand}"
+            SeparatorVisibility="None"
+            ItemsSource="{Binding Services}"
+            RowHeight="210">
+            <ListView.Header>
+                <StackLayout>
+                    <Label 
+                        Margin="10"
+                        Text="Confira todos os nossos serviços" 
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="Black"/>
+                    <Label
+                        Text="Para maiores informações basta selecionar o serviço" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Margin="8"
+                            RowSpacing="0"
+                            ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame
+                                Margin="0,0,0,-10"
+                                Grid.Row="0"
+                                HasShadow="False"
+                                BackgroundColor="#1d9383"
+                                HorizontalOptions="FillAndExpand">
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="White"
+                                    FontSize="Medium"/>
+                            </Frame>
+                            <Frame
+                                Grid.Row="1"
+                                HasShadow="True" 
+                                BackgroundColor="#d8d8d8" 
+                                HorizontalOptions="FillAndExpand">
+                                <Label                                 
+                                    Text="{Binding Description}"
+                                    TextColor="Black"
+                                    FontSize="Small"/>
+                            </Frame>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </custom:CustomListView>
+    </StackLayout>
+</ContentPage>

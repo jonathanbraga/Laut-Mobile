@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:custom="clr-namespace:Laut.Controls"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="Laut.Views.MenuPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout Margin="10">
+                <custom:CustomListView 
+                    ItemsSource="{Binding MenuList}" 
+                    ItemTappedCommand="{Binding ItemListCommand}"
+                    ItemSelected="ItemSelectedColorBackground">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image
+                                        Grid.Column="0"
+                                        Grid.Row="0"
+                                        Source="{Binding ImageURL}"
+                                        Scale="0.76"/>
+                                    <Label 
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        Text="{Binding Name}"
+                                        TextColor="#1F1F1F"
+                                        VerticalTextAlignment="Center"/>
+                                </Grid>                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </custom:CustomListView>
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding NavegateCommand}"
+                            CommandParameter="6"/>
+                    </StackLayout.GestureRecognizers>
+                    <BoxView                       
+                        BackgroundColor="#bdbdbd"
+                        HeightRequest="1"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Source="about.png"
+                            Scale="0.76"/>
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="Sobre"
+                            TextColor="#1F1F1F"
+                            VerticalTextAlignment="Center"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>    
+</MasterDetailPage>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Laut.Views.DetailProductPage"
+             Title="{Binding Item.Name}">
+    <ScrollView>
+        <StackLayout>
+            <Frame 
+            HasShadow="True" 
+            Grid.Row="1" 
+            Margin="6" 
+            IsClippedToBounds="True" 
+            BackgroundColor="White">
+                <Frame.OutlineColor>
+                    <OnPlatform 
+                    x:TypeArguments="Color"
+                    Android="Gray"
+                    iOS="LightGray"/>
+                </Frame.OutlineColor>
+                <StackLayout>
+                    <Label
+                        Margin="3"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="{Binding Item.Name}"
+                        XAlign="Center"/>
+                </StackLayout>
+            </Frame>
+            <Frame 
+            HasShadow="True" 
+            Grid.Row="2"
+            Margin="6,0,6,6" 
+            IsClippedToBounds="True" 
+            BackgroundColor="White">
+                <Frame.OutlineColor>
+                    <OnPlatform 
+                        x:TypeArguments="Color"
+                        Android="Gray"
+                        iOS="LightGray"/>
+                </Frame.OutlineColor>
+                <StackLayout>
+                    <Label
+                    Margin="10"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    Text="{Binding Item.FullDescription}"
+                    XAlign="Start"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
