@@ -7,8 +7,8 @@ using Xamarin.Forms;
 
 namespace Laut.Views
 {
-	public partial class MainPage : ContentPage
-	{
+	public partial class MainPage : CarouselPage
+    {
 		public MainPage ()
 		{
 			InitializeComponent ();

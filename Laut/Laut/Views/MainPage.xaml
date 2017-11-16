@@ -1,11 +1,167 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Laut.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+    <ContentPage 
+        Title="Page_1" 
+        BackgroundColor="#b4dbd5">
+        <Label
+            Text=""/>
+        <StackLayout>
+            <Image
+                VerticalOptions="CenterAndExpand"
+                Source="laut.png"
+                Scale="0.8"
+                Opacity="0.8"/>
+            <StackLayout
+                VerticalOptions="EndAndExpand">
+                <Grid
+                    ColumnSpacing="0"
+                    HeightRequest="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        BackgroundColor="#035146">
+                        <Image
+                            Source="arrow_d.png"
+                            Scale="0.4"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        BackgroundColor="#046c5e">
+                        <Label
+                            Text="Deslize para a direita e saiba mais"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage 
+        Title="Page_2" 
+        BackgroundColor="#b4dbd5">
+        <StackLayout>
+            <Label
+                Margin="10,120,10,70"
+                Text="Venha conferir os nosso serviços!"
+                FontSize="Medium"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="Temos as melhores soluções para os mais diversos"
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="tipos de problemas, desde projetos industriais"
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="até projetos residenciais. Prezamos sempre pela qualidade!"
+                HorizontalOptions="Center"/>
+            <Button
+                Text="Saiba Mais"
+                TextColor="Black"
+                Command="{Binding NavegateToServiceCommand}"/>
+            <StackLayout
+                VerticalOptions="EndAndExpand">
+                <Grid
+                    ColumnSpacing="0"
+                    HeightRequest="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        BackgroundColor="#035146">
+                        <Image
+                            Source="service_w.png"
+                            Scale="0.76"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        BackgroundColor="#046c5e">
+                        <Label
+                            Text="Serviços"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
 
-</ContentPage>
+    </ContentPage>
+    <ContentPage 
+        Title="Page_3" 
+        BackgroundColor="#b4dbd5">
+        <StackLayout>
+            <Label
+                Margin="10,120,10,70"
+                Text="Conheça nosso projetos!"
+                FontSize="Medium"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="Temos anos de experiência na áre de controle"
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="e automação de áreas industriais."
+                HorizontalOptions="Center"/>
+            <Label 
+                Text="A qualidade é a marca presente em todos os projetos!"
+                HorizontalOptions="Center"/>
+            <Button
+                Text="Saiba Mais"
+                TextColor="Black"
+                Command="{Binding NavegateToProjectCommand}"/>
+            <StackLayout
+                VerticalOptions="EndAndExpand">
+                <Grid
+                    ColumnSpacing="0"
+                    HeightRequest="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        Grid.Column="0"
+                        BackgroundColor="#035146">
+                        <Image
+                            Source="project_w.png"
+                            Scale="0.76"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        BackgroundColor="#046c5e">
+                        <Label
+                            Text="Projetos"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>
