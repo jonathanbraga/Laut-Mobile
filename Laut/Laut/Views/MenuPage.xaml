@@ -40,8 +40,7 @@
                 <StackLayout VerticalOptions="EndAndExpand">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer
-                            Command="{Binding NavegateCommand}"
-                            CommandParameter="6"/>
+                            Command="{Binding AboutCommand}"/>
                     </StackLayout.GestureRecognizers>
                     <BoxView                       
                         BackgroundColor="#bdbdbd"
