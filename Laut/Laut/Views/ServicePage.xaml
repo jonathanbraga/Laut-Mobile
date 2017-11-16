@@ -5,7 +5,10 @@
              xmlns:custom="clr-namespace:Laut.Controls"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Laut.Views.ServicePage"
-             Title="Serviços">  
+             Title="Serviços">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Secondary" Text="Contrate Nossos Serviços" Command="{Binding NavigateToFormCommand}"/>
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <custom:CustomListView
             ItemSelected="ItemSelectedColorBackground"

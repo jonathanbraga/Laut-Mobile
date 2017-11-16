@@ -37,6 +37,7 @@ namespace Laut
             Container.RegisterTypeForNavigation<DetailPage>();
             Container.RegisterTypeForNavigation<DetailProjectPage>();
             Container.RegisterTypeForNavigation<DetailProductPage>();
+            Container.RegisterTypeForNavigation<FormPage>();
         }
     }
 }

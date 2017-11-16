@@ -28,6 +28,7 @@ namespace Laut.ViewModels
 
         #region Command
         public DelegateCommand<Service> ItemServiceCommand { get; set; }
+        public DelegateCommand NavigateToFormCommand { get; set; }
         #endregion
 
         public ServicePageViewModel(INavigationService navigationService, ILautData lautData)
@@ -38,6 +39,12 @@ namespace Laut.ViewModels
             Services = _lautData.GetServices();
 
             ItemServiceCommand = new DelegateCommand<Service>(ExecuteItemServiceCommand);
+            NavigateToFormCommand = new DelegateCommand(ExecuteNavigateToFormCommand);
+        }
+
+        private void ExecuteNavigateToFormCommand()
+        {
+            _navigationService.NavigateAsync("FormPage");
         }
 
         private void ExecuteItemServiceCommand(Service obj)
