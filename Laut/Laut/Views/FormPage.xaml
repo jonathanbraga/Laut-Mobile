@@ -123,16 +123,16 @@
             <ScrollView>
                 <StackLayout Margin="10">
             <Label
-            FontSize="Large"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Text="Avaliação e Sintonia de Malhas de Controle"
-            XAlign="Center"/>
-            <Entry Placeholder="Nome da empresa"/>
-            <Entry Placeholder="Nome do responsável"/>
-            <Entry Placeholder="Endereço"/>
-            <Entry Placeholder="E-mail"/>
-            <Entry Placeholder="Telefone para contado"/>
+                FontSize="Large"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Avaliação e Sintonia de Malhas de Controle"
+                XAlign="Center"/>
+            <Entry Placeholder="Nome da empresa" Text="{Binding NomeEmpresa}"/>
+            <Entry Placeholder="Nome do responsável" Text="{Binding NomeResponsavel}"/>
+            <Entry Placeholder="Endereço" Text="{Binding EnderecoSintonia}"/>
+            <Entry Placeholder="E-mail" Text="{Binding EmailSintonia}"/>
+            <Entry Placeholder="Telefone para contado" Text="{Binding TelefoneSintonia}"/>
             <StackLayout Margin="6">
                 <Label
                     HorizontalOptions="Center"
@@ -140,32 +140,33 @@
                     FontSize="Medium"
                     Text="Tipo do serviço"/>
                 <StackLayout Orientation="Horizontal">
-                    <Switch/>
+                    <Switch IsToggled="{Binding AvaliacaoMalha}"/>
                     <Label Text="Avaliação de malhas de controle"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Switch/>
+                    <Switch IsToggled="{Binding SintoniaMalha}"/>
                     <Label Text="Sintonia de malhas de controle"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Switch/>
+                    <Switch IsToggled="{Binding AvaliacaoSintonia}"/>
                     <Label Text="Avaliação e sintonia de malhas de controle"/>
                 </StackLayout>
             </StackLayout>
-            <Entry Placeholder="Breve descrição da(s) plata(s)"/>
+            <Entry Placeholder="Breve descrição da(s) plata(s)" Text="{Binding Descricao}"/>
             <StackLayout Margin="6">
                 <Label
                     HorizontalOptions="Center"
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="Número de malhas de controle"/>
-                <Entry Placeholder="Quantidade total de malhas de temperatura"/>
-                <Entry Placeholder="Quantidade total de malhas de nível"/>
-                <Entry Placeholder="Quantidade total de malhas de pressão"/>
-                <Entry Placeholder="Quantidade total de malhas de vazão"/>
-                <Entry Placeholder="Quantidade total de outras malhas"/>
+                <Entry Placeholder="Quantidade total de malhas de temperatura" Text="{Binding MalhaTemperatura}"/>
+                <Entry Placeholder="Quantidade total de malhas de nível" Text="{Binding MalhaNivel}"/>
+                <Entry Placeholder="Quantidade total de malhas de pressão" Text="{Binding MalhaPressao}"/>
+                <Entry Placeholder="Quantidade total de malhas de vazão" Text="{Binding MalhaVazao}"/>
+                <Entry Placeholder="Quantidade total de outras malhas" Text="{Binding OutraMalha}"/>
                 <Label Text="* No caso da existências de outras malhas (além de temperatura, nível, pressão e vazão), descrever brevemente a natureza de tais malhas:"/>
             </StackLayout>
+            <Button Text="Enviar" Command="{Binding SendEmailSintoniaCommand}"/>                    
         </StackLayout>
             </ScrollView>
         </ContentPage>

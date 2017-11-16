@@ -10,7 +10,6 @@ namespace Laut.ViewModels
 	public class FormPageViewModel : BindableBase
 	{
         #region Binding
-
         #region Automação Predial
         private string _responsavel;
         public string Responsavel
@@ -161,15 +160,147 @@ namespace Laut.ViewModels
         }
         #endregion
 
+        #region Avaliação e Sintonia
+        private string _nomeEmpresa;
+        public string NomeEmpresa
+        {
+            get { return _nomeEmpresa; }
+            set { SetProperty(ref _nomeEmpresa, value); }
+        }
+
+        private string _nomeResponsavel;
+        public string NomeResponsavel
+        {
+            get { return _nomeResponsavel; }
+            set { SetProperty(ref _nomeResponsavel, value); }
+        }
+
+        private string _enderecoSintonia;
+        public string EnderecoSintonia
+        {
+            get { return _enderecoSintonia; }
+            set { SetProperty(ref _enderecoSintonia, value); }
+        }
+
+        private string _emailSintonia;
+        public string EmailSintonia
+        {
+            get { return _emailSintonia; }
+            set { SetProperty(ref _emailSintonia, value); }
+        }
+
+        private string _telefoneSintonia;
+        public string TelefoneSintonia
+        {
+            get { return _telefoneSintonia; }
+            set { SetProperty(ref _telefoneSintonia, value); }
+        }
+
+        //Tipo Serviço
+        private bool _avaliacaoMalha;
+        public bool AvaliacaoMalha
+        {
+            get { return _avaliacaoMalha; }
+            set { SetProperty(ref _avaliacaoMalha, value); }
+        }
+
+        private bool _sintoniaMalha;
+        public bool SintoniaMalha
+        {
+            get { return _sintoniaMalha; }
+            set { SetProperty(ref _sintoniaMalha, value); }
+        }
+
+        private bool _avaliacaoSintonia;
+        public bool AvaliacaoSintonia
+        {
+            get { return _avaliacaoSintonia; }
+            set { SetProperty(ref _avaliacaoSintonia, value); }
+        }
+
+        private string _descricao;
+        public string Descricao
+        {
+            get { return _descricao; }
+            set { SetProperty(ref _descricao, value); }
+        }
+
+        //Numero de Malhas de Controle
+        private string _malhaTemperatura;
+        public string MalhaTemperatura
+        {
+            get { return _malhaTemperatura; }
+            set { SetProperty(ref _malhaTemperatura, value); }
+        }
+
+        private string _malhaNivel;
+        public string MalhaNivel
+        {
+            get { return _malhaNivel; }
+            set { SetProperty(ref _malhaNivel, value); }
+        }
+
+        private string _malhaPressao;
+        public string MalhaPressao
+        {
+            get { return _malhaPressao; }
+            set { SetProperty(ref _malhaPressao, value); }
+        }
+
+        private string _malhaVazao;
+        public string MalhaVazao
+        {
+            get { return _malhaVazao; }
+            set { SetProperty(ref _malhaVazao, value); }
+        }
+
+        private string _outraMalha;
+        public string OutraMalha
+        {
+            get { return _outraMalha; }
+            set { SetProperty(ref _outraMalha, value); }
+        }
+        #endregion
         #endregion
 
         #region Command
         public DelegateCommand SendEmailAutomacaoPredialCommand { get; set; }
+        public DelegateCommand SendEmailSintoniaCommand { get; set; }
         #endregion
 
         public FormPageViewModel()
         {
             SendEmailAutomacaoPredialCommand = new DelegateCommand(ExecuteSendEmailAutomacaoPredialCommand);
+            SendEmailSintoniaCommand = new DelegateCommand(ExecuteSendEmailSintoniaCommand);
+        }
+
+        private void ExecuteSendEmailSintoniaCommand()
+        {
+            var emaillMesseger = CrossMessaging.Current.EmailMessenger;
+            if (emaillMesseger.CanSendEmail)
+            {   
+                var tipoServico = AvaliacaoMalha ? "Avaliação de malhas de controle" : SintoniaMalha ? "Sintonia de malhas de controle" : "Avaliação de sintonia de malhas de controle";
+
+                var message = $"Nome da empresa {NomeEmpresa} \n" +
+                    $"Nome do responsável {NomeResponsavel} \n" +
+                    $"Endereço: {EnderecoSintonia} \n" +
+                    $"{EmailSintonia} - {TelefoneSintonia} \n" +
+                    $"Tipo do Serviço: {tipoServico} \n" +
+                    $"{Descricao} \n" +
+                    $"Quantidade total de malhas de temperatura {MalhaTemperatura} \n" +
+                    $"Quantidade total de malhas de nível {MalhaNivel}\n " +
+                    $"Quantidade total de malhas de pressão {MalhaPressao} \n" +
+                    $"Quantidade total de malhas de vazão {MalhaVazao} \n" +
+                    $"Quantidade total de outras malhas {OutraMalha}\n";
+
+                var email = new EmailMessageBuilder()
+                    .To("jonathanb2br@gmail.com")
+                    .Subject("[Formulário] Avaliação e sintonia de malhas de controle")
+                    .Body(message)
+                    .Build();
+
+                emaillMesseger.SendEmail(email);
+            }
         }
 
         private void ExecuteSendEmailAutomacaoPredialCommand()
@@ -192,7 +323,7 @@ namespace Laut.ViewModels
                     $"Possui uma área de {Area} m²";
                 var email = new EmailMessageBuilder()
                     .To("jonathanb2br@gmail.com")
-                    .Subject("Formulário")
+                    .Subject("[Formulário] Automação predial e residencial")
                     .Body(message)
                     .Build();
 
