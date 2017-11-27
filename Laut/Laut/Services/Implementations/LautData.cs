@@ -197,21 +197,21 @@ namespace Laut.Services.Implementations
                     Id = 2,
                     Name = "DTVZ/SONIC",
                     FullDescription = "Este projeto está sendo desenvolvido pela mesma equipe desde fevereiro de 2003. Em uma primeira fase foram instalados no duto entre ETB e Upanema, da UN-RNCE da Petrobras, três pontos de coleta de dados de pressão. Cada ponto é constituído basicamente de um transmissor de pressão, um PLC e um rádio modem, instalados em painéis apropriados. Os pontos de coleta transmitem os seus dados, via rádio, para as estações mais próximas, nas quais os softwares de processamento de sinais e de supervisão estão rodando e sinalizarão os possíveis vazamentos no duto em questão. Neste primeiro projeto, os métodos implementados são baseados no ruído de pressão e no uso de redes neurais e Wavelets. Atualmente, estamos estudando e implementando métodos de detecção de vazamentos baseados em dispositivos acústicos em um outro duto da Petrobras. O sistema tem pontos de coleta de dados de pressão nas duas extremidades do duto e um sistema de processamento de sinais, com o uso de DSPs e sistemas supervisórios.",
-                    Description = "Este projeto está sendo desenvolvido pela mesma equipe desde fevereiro de 2003. Em uma primeira fase foram instalados no duto entre ETB e Upanema ..."
+                    Description = "Este projeto está sendo desenvolvido pela mesma equipe desde fevereiro de 2003. Em uma primeira fase foram instalados no duto entre ETB ..."
                 },
                 new Project
                 {
                     Id = 3,
                     Name = "CONPETRO",
                     FullDescription = "O objetivo do projeto foi desenvolver e aplicar técnicas de controle avançado, em particular Controle Preditivo, na Torre Desbutanizadora da UPGN-II do Pólo de Guamaré para otimizar a produção de GLP. Quatro principais atividades foram desenvolvidas em paralelo para obterem-se os seguintes produtos: Programa de controle avançado em linguagem C++; Simulação das Torres; Preditor Neural e Proposta de uma Nova Malha de Controle.",
-                    Description = "O objetivo do projeto foi desenvolver e aplicar técnicas de controle avançado, em particular Controle Preditivo, na Torre Desbutanizadora da UPGN-II do Pólo ..."
+                    Description = "O objetivo do projeto foi desenvolver e aplicar técnicas de controle avançado, em particular Controle Preditivo, na Torre Desbutanizadora ..."
                 },
                 new Project
                 {
                     Id = 4,
                     Name = "REDICONT",
                     FullDescription = "Objetiva a aplicação de técnicas de controle ditas não convencionais, como as preditivas (incluindo o PID preditivo), adaptativas (incluindo o PID adaptativo) e inteligentes, que são reconhecidamente eficientes no controle de plantas não-lineares. Porém, apesar deste fato, a implementação das mesmas em processos reais ainda é bastante restrita, principalmente devido à dificuldades de programação destas técnicas na instrumentação industrial atual (controladores multi e single-loop e CLPs). A idéia deste projeto é estudar e implementar estas técnicas em processos utilizados na indústria do petróleo. As técnicas de controle serão implementadas em software comunicando-se com CLPs.",
-                    Description = "Objetiva a aplicação de técnicas de controle ditas não convencionais, como as preditivas (incluindo o PID preditivo), adaptativas (incluindo o PID adaptativo) ..."
+                    Description = "Objetiva a aplicação de técnicas de controle ditas não convencionais, como as preditivas (incluindo o PID preditivo), adaptativas ..."
                 },
                 new Project
                 {
@@ -232,21 +232,21 @@ namespace Laut.Services.Implementations
                     Id = 7,
                     Name = "AVANSAL",
                     FullDescription = "O objetivo principal deste projeto é a produção de um software para aplicação de controle avançado, implementando técnicas de controle preditivo multivariável, identificação/re-identificação de modelos e avaliação do desempenho de malhas de controle. Outro objetivo a ser atingido é a capacitação de uma equipe para dar suporte e manutenção ao sistema desenvolvido, visando a sua aplicação prática.",
-                    Description = "O objetivo principal deste projeto é a produção de um software para aplicação de controle avançado, implementando técnicas de controle preditivo ..."
+                    Description = "O objetivo principal deste projeto é a produção de um software para aplicação de controle avançado, implementando técnicas de controle ..."
                 },
                 new Project
                 {
                     Id = 8,
                     Name = "AUTODOC",
                     FullDescription = "O projeto tem como objetivo o desenvolvimento de um software que gere um documento de Projeto de Engenharia a partir de uma interface de entrada. A interface proposta é uma planilha eletrônica padrão para a entrada de dados. Este projeto será desenvolvido em parceria com a empresa Altus, sediada em São Leopoldo-RS e que desenvolve, fabrica e fornece equipamentos de automação industrial e serviços associados. Como se trata de um software de complexidade média pretende-se empregar uma metodologia ágil em seu desenvolvimento. Este tipo de metodologia baseia o foco do desenvolvimento nos requisitos levantados pelo cliente através da descrição de cenários. O cronograma de desenvolvimento irá prever a entrega de versões de teste ao cliente e, ao final, uma versão validada e testada.",
-                    Description = "O projeto tem como objetivo o desenvolvimento de um software que gere um documento de Projeto de Engenharia a partir de uma interface de entrada. A interface proposta é uma planilha eletrônica padrão para a entrada de dados. Este projeto será desenvolvido em parceria com a empresa Altus, sediada em São Leopoldo-RS e que desenvolve, fabrica e fornece equipamentos de automação industrial e serviços associados. Como se trata de um software de complexidade média pretende-se empregar uma metodologia ágil em seu desenvolvimento. Este tipo de metodologia baseia o foco do desenvolvimento nos requisitos levantados pelo cliente através da descrição de cenários. O cronograma de desenvolvimento irá prever a entrega de versões de teste ao cliente e, ao final, uma versão validada e testada."
+                    Description = "O projeto tem como objetivo o desenvolvimento de um software que gere um documento de Projeto de Engenharia a partir de uma interface de ..."
                 },
                 new Project
                 {
                     Id = 9,
                     Name = "GERINE",
                     FullDescription = "Neste projeto pretende-se desenvolver metodologias e processos que permitam as seguintes funcionalidades no nível gerencial da automação industrial: Definição de dados relevantes para gerência de informação; Tratamento de dados em tempo real, com propriedades de compressão, bufferização e filtragem; Integração do sistema desenvolvido com o atual sistema de informações da produção da Petrobras (SIP); Geração de relatórios para análise gerencial estratégica, incluindo gráficos e informações sintetizadas.",
-                    Description = "Neste projeto pretende-se desenvolver metodologias e processos que permitam as seguintes funcionalidades no nível gerencial da automação industrial ..."
+                    Description = "Neste projeto pretende-se desenvolver metodologias e processos que permitam as seguintes funcionalidades no nível gerencial da automação ..."
                 }
             };
 
@@ -262,35 +262,35 @@ namespace Laut.Services.Implementations
                     Id = 1,
                     Name = "Sintoniia e Avalização de malhas de controle insdustriais",
                     FullDescription = "Temos uma ferramenta para o monitoramento, avaliação e sintonia de malhas de controle de processos industriais, que permite a avaliação do desempenho de malhas de controle através de índices de desempenho previamente definidos e, em caso de necessidade, a realização de forma automática da sintonia das malhas. O uso dessa ferramenta implica em benefícios econômicos ao processo decorrente de menor desgaste dos atuadores e de uma maior estabilidade das variáveis do processo.",
-                    Description = "Temos uma ferramenta para o monitoramento, avaliação e sintonia de malhas de controle de processos industriais, que permite a avaliação do desempenho de malhas de controle através de ..."
+                    Description = "Temos uma ferramenta para o monitoramento, avaliação e sintonia de malhas de controle de processos industriais, que permite a avaliação ..."
                 },
                 new Service
                 {
                     Id = 2,
                     Name = "Programação de sistemas supervisionados",
                     FullDescription = "Desenvolvemos telas de sistemas supervisórios, incluindo o planejamento do sistema, a elaboração das telas e subtelas de supervisão e a comunicação com CLPs de diversos fabricantes.",
-                    Description = "Desenvolvemos telas de sistemas supervisórios, incluindo o planejamento do sistema, a elaboração das telas e subtelas de supervisão e a comunicação com CLPs de diversos fabricantes."
+                    Description = "Desenvolvemos telas de sistemas supervisórios, incluindo o planejamento do sistema, a elaboração das telas e subtelas de supervisão ..."
                 },
                 new Service
                 {
                     Id = 3,
                     Name = "Programação de controladores lógicos programáveis",
                     FullDescription = "Elaboramos programas de automação para CLPs em diversas linguagens, incluindo Ladder, Grafcet e Blocos de Função e para equipamentos de diversos fabricantes.",
-                    Description = "Elaboramos programas de automação para CLPs em diversas linguagens, incluindo Ladder, Grafcet e Blocos de Função e para equipamentos de diversos fabricantes."
+                    Description = "Elaboramos programas de automação para CLPs em diversas linguagens, incluindo Ladder, Grafcet e Blocos de Função e para equipamentos ..."
                 },
                 new Service
                 {
                     Id = 4,
                     Name = "Treinamento em controle de processos industriais",
                     FullDescription = "Realizamos treinamento em controle de processos industriais, usando plantas didáticas industriais disponíveis no laboratório. Esse treinamento permite a apresentação e demonstração de conceitos básicos de ações de controle, sintonia de malhas de controle, controle em cascata, entre outros, usando plantas equipadas com instrumentação industrial.",
-                    Description = "Realizamos treinamento em controle de processos industriais, usando plantas didáticas industriais disponíveis no laboratório. Esse treinamento permite a apresentação e demonstração de conceitos básicos ..."
+                    Description = "Realizamos treinamento em controle de processos industriais, usando plantas didáticas industriais disponíveis no laboratório. Esse ..."
                 },
                 new Service
                 {
                     Id = 5,
                     Name = "Projeto de sistemas de automação predial e residencial",
                     FullDescription = "Elaboramos projetos de automação predial, incluindo segurança eletrônica, reuso de água cinza, controle de temperatura e micro geração de energia elétrica usando painéis fotovoltaicos. Um projeto dessa natureza possibilita o uso racional da água e energia elétrica em uma edificação, resultado em economia e um retorno do investimento em curto prazo.",
-                    Description = "Elaboramos projetos de automação predial, incluindo segurança eletrônica, reuso de água cinza, controle de temperatura e micro geração de energia elétrica usando painéis fotovoltaicos. Um projeto dessa natureza ..."
+                    Description = "Elaboramos projetos de automação predial, incluindo segurança eletrônica, reuso de água cinza, controle de temperatura e micro geração ..."
                 },
                 new Service
                 {
@@ -304,7 +304,7 @@ namespace Laut.Services.Implementations
                     Id = 7,
                     Name = "Treinamento em sotfwares voltados à elevação artificial de petróleo",
                     FullDescription = "Realizamos treinamentos em softwares voltados à automação de poços de petróleo, incluindo os métodos de elevação artificial por Bombeio Mecânico, Gás Lift, Bombeio Centrífugo Submerso (BCS) e Bombeio por Cavidades Progressivas (BCP).",
-                    Description = "Realizamos treinamentos em softwares voltados à automação de poços de petróleo, incluindo os métodos de elevação artificial por Bombeio Mecânico, Gás Lift, Bombeio Centrífugo Submerso (BCS) e Bombeio por ..."
+                    Description = "Realizamos treinamentos em softwares voltados à automação de poços de petróleo, incluindo os métodos de elevação artificial por Bombeio ..."
                 }
             };
 

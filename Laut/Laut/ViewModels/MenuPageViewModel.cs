@@ -4,7 +4,6 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System.Collections.ObjectModel;
-using System;
 
 namespace Laut.ViewModels
 {

@@ -18,13 +18,13 @@
                 <StackLayout>
                     <Label 
                         Margin="10"
-                        Text="Confira todos os nossos projetos" 
+                        Text="Confira todos os nossos produtos" 
                         FontSize="Medium"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         TextColor="Black"/>
                     <Label
-                        Text="Para maiores informações basta selecionar um projeto" 
+                        Text="Para maiores informações basta selecionar um produto" 
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
                 </StackLayout>

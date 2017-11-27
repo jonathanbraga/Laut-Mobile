@@ -1,14 +1,10 @@
 ﻿using Laut.Models;
-using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Laut.ViewModels
 {
-	public class DetailProjectPageViewModel : BindableBase, INavigatingAware
+    public class DetailProjectPageViewModel : BindableBase, INavigatingAware
     {
         private Project _item;
         public Project Item
